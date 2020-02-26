@@ -4,7 +4,7 @@ spring:
   application:
     name: XZF_SmallApp_House
   datasource:
-    url: jdbc:mysql://121.36.221.221:3306/hm49?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://121.36.221.221:3306/xzf?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
     username: root
     password: 827743
     driver-class-name: com.mysql.jdbc.Driver
