@@ -6,9 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="XZF_SmallApp_Commons" />
+        <module name="XZF_SmallApp_House" />
         <module name="XZF_SmallApp_Eureka" />
+        <module name="XZF_SmallApp_Common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="XZF_SmallApp_Commons" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="XZF_SmallApp_Common" options="-parameters" />
+      <module name="XZF_SmallApp_Commons" options="-parameters" />
+      <module name="XZF_SmallApp_Eureka" options="-parameters" />
+      <module name="XZF_SmallApp_House" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -10,7 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>XZF_SmallApp_Eureka</module>
-        <module>XZF_SmallApp_Commons</module>
+        <module>XZF_SmallApp_Common</module>
+        <module>XZF_SmallApp_House</module>
+        <module>XZF_SmallApp_Common</module>
     </modules>
 
     <parent>
