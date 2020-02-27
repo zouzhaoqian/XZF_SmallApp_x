@@ -31,4 +31,5 @@ public class House {
     private Date createTime;
     @JsonFormat(pattern ="yyyy-MM-dd" )
     private Date updateTime;
+    private Boolean valid;
 }
