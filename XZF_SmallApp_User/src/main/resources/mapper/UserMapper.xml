@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xzf.user.mapper.UserMapper">
+    <select id="selectAll" resultType="com.xzf.pojo.User">
+        select * from user
+    </select>
+    <select id="findById" resultType="com.xzf.pojo.User" parameterType="int">
+        select * from user where id=#{id}
+    </select>
+    <delete id="delete" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
+    <insert id="insert" parameterType="com.xzf.pojo.User">
+        insert into user (sex, nicheng, phone, wechat, name, identity_card, is_owner, opid,avarta,skey,sessionkey)
+              values (#{sex}, #{nicheng}, #{phone}, #{wechat}, #{name}, #{identity_card},#{is_owner},#{opid},#{avarta},#{skey},#{sessionkey})
+    </insert>
+    <update id="update" parameterType="com.xzf.pojo.User">
+        update user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="sex!=null">sex=#{sex},</if>
+            <if test="nicheng!=null">nicheng=#{nicheng},</if>
+            <if test="phone!=null">phone=#{phone},</if>
+            <if test="wechat!=null">wechat=#{wechat},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="identity_card!=null">identity_card=#{identity_card},</if>
+            <if test="is_owner!=null">is_owner=#{is_owner},</if>
+            <if test="avarta!=null">avarta=#{avarta}</if>
+        </trim>
+        where id=#{id}
+    </update>
+</mapper>

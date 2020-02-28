@@ -13,6 +13,8 @@
         <module>XZF_SmallApp_Common</module>
         <module>XZF_SmallApp_House</module>
         <module>XZF_SmallApp_Common</module>
+        <module>XZF_SmallApp_User</module>
+        <module>XZF_SmallApp_Zuul</module>
     </modules>
 
     <parent>

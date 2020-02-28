@@ -1,0 +1,20 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: XZF_SmallApp_User
+  datasource:
+    url: jdbc:mysql://121.36.221.221:3306/xzf?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 827743
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8000/eureka ；多个地址可使用,分隔
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+mybatis-plus:
+  type-aliases-package: com.xzf.pojo
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
